@@ -34,7 +34,7 @@ const ContactDetail = ({ updateContact, updateImage }) => {
         inputRef.current.click();
     };
 
-    const udpatePhoto = async (file) => {
+    const updatePhoto = async (file) => {
         try {
             const formData = new FormData();
             formData.append('file', file, file.name);
@@ -114,7 +114,7 @@ const ContactDetail = ({ updateContact, updateImage }) => {
             </div>
 
             <form style={{ display: 'none' }}>
-                <input type='file' ref={inputRef} onChange={(event) => udpatePhoto(event.target.files[0])} name='file' accept='image/*' />
+                <input type='file' ref={inputRef} onChange={(event) => updatePhoto(event.target.files[0])} name='file' accept='image/*' />
             </form>
         </>
     )
